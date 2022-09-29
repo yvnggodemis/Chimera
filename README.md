@@ -37,7 +37,7 @@ Look Through Script, there will be Numerous '**REDACTED**' lines. Replace these 
 - Line 241: Replace with Active Directory Membership for VPN Access
 - Line 646: Replace with Shared Text Document Detailing Functions, Help, etc
 - Line 660: Same as Above Icon Path
-- 
+
 ## Run Locally
 
 Right Click on ps1 Script and Click 'Run with Powershell'
