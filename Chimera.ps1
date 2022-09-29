@@ -18,7 +18,7 @@ $version = "10.0.0.20210805"
 
 .UPDATE NOTES
     Version 10.0.0 - Changed help button to open Chimera's usage documentation rather than a message box
-                    Added WVU Medicine Icon to Chimera
+                    Added **REDACTED** Icon to Chimera
                     Final release
 
 
@@ -51,7 +51,7 @@ $version = "10.0.0.20210805"
                     Removed COVID Portal Buttons
                     Color Coated Account Status and Password Status Text Boxes
 
-    Version 5.5.0 - Changed update managing logic to look in \\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\ instead of my personal folder. Some helpdesk staff don't have access to my folder
+    Version 5.5.0 - Changed update managing logic to look in **REDACTED** instead of my personal folder. Some helpdesk staff don't have access to my folder
                     Added connection testing for computer file explorer, so it doesn't take so long to error out if it can't reach the PC
 
     Version 5.4.0 - Added SEC-COVID-19 Check
@@ -100,9 +100,9 @@ if ( $devFlag -eq "0" ) {
 	[native.win]::ShowWindow(([System.Diagnostics.Process]::GetCurrentProcess() | Get-Process).MainWindowHandle, 0)
 
     #Code Integrity Check
-    $versionNumber = Get-Content '\\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\Chimera.ps1' | Select -Index 0
+    $versionNumber = Get-Content '**REDACTED**' | Select -Index 0
     if ( $versionNumber -ne $version ) { 
-        ii "\\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James"
+        ii "**REDACTED**"
         Start-Sleep 1
         [Windows.Forms.MessageBox]::Show("Newer version of Chimera found:`n`nPlease copy and paste Chimera from the open window to your preferred run location.", "Update", [Windows.Forms.MessageBoxButtons]::OK,[Windows.Forms.MessageBoxIcon]::Information)
         Write-Host $versionNumber
@@ -112,7 +112,7 @@ if ( $devFlag -eq "0" ) {
     }
     $currentFile = $MyInvocation.MyCommand.Source
     $SourceFile = Get-FileHash $currentFile -Algorithm SHA1
-    $DestFile = Get-FileHash '\\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\Chimera.ps1' -Algorithm SHA1 
+    $DestFile = Get-FileHash '**REDACTED**' -Algorithm SHA1 
     if ( $SourceFile.Hash -ne $DestFile.Hash ) {
         [Windows.Forms.MessageBox]::Show("This is not a geunine copy of Chimera.`nThis is being reported to the program developer.", "Exiting Application", [Windows.Forms.MessageBoxButtons]::OK,[Windows.Forms.MessageBoxIcon]::Warning)
         $objLOADINGFORM.Close()
@@ -144,7 +144,7 @@ $objLoadingFormProgressBar.Location = New-Object System.Drawing.Size(10,150)
 $objLoadingFormProgressBar.Size = New-Object System.Drawing.Size(460,23)
 $objLoadingFormProgressBar.Value = $objLoadingFormProgressAmount
 $objLoadingFormProgressBar.Style = "Continuous"
-$objChimeraFormIconPath = '\\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\ChimeraDeps\icon.ico'
+$objChimeraFormIconPath = '**REDACTED**'
 $objLoadingForm.Icon = New-Object System.Drawing.Icon($objChimeraFormIconPath)
 $objLoadingForm.Controls.Add($objLoadingFormLabel)
 $objLoadingForm.Controls.Add($objLoadingFormProgressBar)
@@ -159,8 +159,8 @@ $objLoadingFormProgressBar.Value = $objLoadingFormProgressAmount
 $objLoadingForm.Refresh()
 Start-Sleep -Milliseconds 700
 $objLoadingFormLabel.Text = "Checking Access Level..."
-$optionalT3 = Get-Content "\\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\ChimeraDeps\OptionalT3.txt"
-$optionalT2 = Get-Content "\\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\ChimeraDeps\OptionalT2.txt"
+$optionalT3 = Get-Content "**REDACTED**"
+$optionalT2 = Get-Content "**REDACTED**"
 $currentUser = Get-ADUser $env:Username -Properties *
 $objLoadingFormProgressAmount = 99
 $objLoadingFormProgressBar.Value = $objLoadingFormProgressAmount
@@ -238,7 +238,7 @@ if ( $FindADUserName -ne "" ) {
         $objPersonalDriveTextBox.Text = $user.HomeDirectory
         $objMemberOfTextBoxList = $user.memberof -replace '^CN=([^,]+).+$','$1' | Sort-Object
         $objMemberOfTextBox.Items.AddRange($objMemberOfTextBoxList)
-        if ( $objMemberOfTextBoxList -Match "ACS - VPN - WVUHS" ) {
+        if ( $objMemberOfTextBoxList -Match "**REDACTED**" ) {
             $objVPNUserTextBox.Text = "Yes"
         } else {
             $objVPNUserTextBox.Text = "No"
@@ -643,7 +643,7 @@ Function REMOTEDESKTOPUSERMODIFICATION ( $pc ) {
 }
 
 Function HELP () {
-    ii "\\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\ChimeraDeps\HowTo.txt"
+    ii "**REDACTED**"
     #[Windows.Forms.MessageBox]::Show("Welcome to Chimera!`n`nTo use:`n`nType in the username you wish to look up information for and select the search button.`n`nFor Computer tag functions:`n`nPlease type in a computer tag in the corresponding box and click an option to enact on the computer.`n`nPlease report all bugs, or new features you would like added to James Brotosky at james.brotosky@wvumedicine.org.", "Chimera Usage", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information)
 }
 
@@ -651,13 +651,13 @@ Function WHATSNEW () {
     [Windows.Forms.MessageBox]::Show("Chimera - $Version`n`nWhats new in this update:`n`n- Auto open Chimera file location when new update is found`n`n- RDP Management Bug Fix", "Chimera $Version", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information)
 }
 
-if (( $currentUser.Title -eq "Sr Help Desk Tech::100914" ) -or ($CurrentUser.Title -eq "Assoc IT Support Tech::100920") -or ( $CurrentUser.Title -eq "IT Support Technician::100921") -or ( $CurrentUser.Title -eq "Sr IT Support Tech::100922") -or ( $optionalT3 -Contains $env:Username )) {
+if ( $optionalT3 -Contains $env:Username ) {
     $objChimeraForm = New-Object System.Windows.Forms.Form
     $objChimeraForm.Text = "Chimera - Senior Technician - Version: $version"
     $objChimeraForm.AutoSize = $True
     $objChimeraForm.StartPosition = "CenterScreen"
     $objChimeraForm.KeyPreview = $True
-    $objChimeraFormIconPath = '\\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\ChimeraDeps\icon.ico'
+    $objChimeraFormIconPath = '**REDACTED**'
     $objChimeraForm.Icon = New-Object System.Drawing.Icon($objChimeraFormIconPath)
     $objFindButton = New-Object System.Windows.Forms.Button
     $objFindButton.Location = New-Object System.Drawing.Size(10,55)
