@@ -51,7 +51,7 @@ $version = "10.0.0.20210805"
                     Removed COVID Portal Buttons
                     Color Coated Account Status and Password Status Text Boxes
 
-    Version 5.5.0 - Changed update managing logic to look in \\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\ instead of my personal folder. Some helpdesk staff don't have access to my folder
+    Version 5.5.0 - Changed update managing logic to look in **REDACTED** instead of my personal folder. Some helpdesk staff don't have access to my folder
                     Added connection testing for computer file explorer, so it doesn't take so long to error out if it can't reach the PC
 
     Version 5.4.0 - Added SEC-COVID-19 Check
@@ -237,7 +237,7 @@ if ( $FindADUserName -ne "" ) {
         $objPersonalDriveTextBox.Text = $user.HomeDirectory
         $objMemberOfTextBoxList = $user.memberof -replace '^CN=([^,]+).+$','$1' | Sort-Object
         $objMemberOfTextBox.Items.AddRange($objMemberOfTextBoxList)
-        if ( $objMemberOfTextBoxList -Match "ACS - VPN - WVUHS" ) {
+        if ( $objMemberOfTextBoxList -Match "**REDACTED**" ) {
             $objVPNUserTextBox.Text = "Yes"
         } else {
             $objVPNUserTextBox.Text = "No"
