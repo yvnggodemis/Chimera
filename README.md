@@ -31,6 +31,9 @@ Look Through Script, there will be Numerous '**REDACTED**' lines. Replace these 
 - Line 147: Replace this with an Icon Path
 - Line 162: This was Originally Access Control. Replace this with a Shared Text File Containing SamAccountName's that you wish to be able to run this file. Remove if you do not wish to have access control
 - Line 163: Same as Above
+- Line 206: Replace with Domain Name (example.com)
+- Line 207: Replace with Domain Name
+- Line 209: Replace with Domain Name
 - Line 241: Replace with Active Directory Membership for VPN Access
 - Line 646: Replace with Shared Text Document Detailing Functions, Help, etc
 - Line 660: Same as Above Icon Path
