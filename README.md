@@ -14,7 +14,7 @@ A useful interface for working with typical help desk functionality of Active Di
 - Remote Desktop User Management
 
 
-![App Screenshot](images/ChimeraScreenShot.PNG)
+![App Screenshot](images/ChimeraScreenShot.png)
 
 ## Deployment
 
