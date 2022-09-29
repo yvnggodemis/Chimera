@@ -1,7 +1,7 @@
 
 # Chimera
 
-A useful interface for working with typical help desk functionality of Active Directory Built 100% in Powershell
+A useful interface for working with typical help desk functionality of Active Directory Built 100% in Powershell with Access Control Based on User Job Title in Active Directory or by Adding their SamAccountName in Optional Text Files
 
 
 ## Features
