@@ -12,6 +12,7 @@ A useful interface for working with typical help desk functionality of Active Di
 - Remote to Computer with the use of SCCM's Remote Control Viewer
 - Reboot Remote Computer and Automatically Remote in Once Host is Back Online (SCCM Remote Control Viewer)
 - Remote Desktop User Management
+![App Screenshot](images/ChimeraScreenShot.PNG)
 
 
 ## Installation
