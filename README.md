@@ -16,6 +16,9 @@ A useful interface for working with typical help desk functionality of Active Di
 
 ![App Screenshot](images/ChimeraScreenShot.PNG)
 
+## Deployment
+
+When Finished Making Changes, Make Sure to Change the Development Flag on Line 95 to Anything Except 1. This will Minimize the Powershell Window Upon Launch and Only Show the GUI as well as do the Code Integrity Checking and Update Checks. Or if Compiled into an EXE, this will Assist with Only Showing the GUI as well. 
 
 ## Installation/Requirements
 
@@ -35,6 +38,9 @@ Look Through Script, there will be Numerous '**REDACTED**' lines. Replace these 
 
 Right Click on ps1 Script and Click 'Run with Powershell'
 
+## Acknowledgements
+
+For ease of use, you can also compile this to an executable thanks to [MScholtes](https://github.com/MScholtes/PS2EXE) and their Powershell to EXE converter.
 
 
 ## Authors
