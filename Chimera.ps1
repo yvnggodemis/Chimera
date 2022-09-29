@@ -644,7 +644,7 @@ Function REMOTEDESKTOPUSERMODIFICATION ( $pc ) {
 
 Function HELP () {
     ii "**REDACTED**"
-    #[Windows.Forms.MessageBox]::Show("Welcome to Chimera!`n`nTo use:`n`nType in the username you wish to look up information for and select the search button.`n`nFor Computer tag functions:`n`nPlease type in a computer tag in the corresponding box and click an option to enact on the computer.`n`nPlease report all bugs, or new features you would like added to James Brotosky at james.brotosky@wvumedicine.org.", "Chimera Usage", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information)
+    #[Windows.Forms.MessageBox]::Show("Welcome to Chimera!`n`nTo use:`n`nType in the username you wish to look up information for and select the search button.`n`nFor Computer tag functions:`n`nPlease type in a computer tag in the corresponding box and click an option to enact on the computer.", "Chimera Usage", [Windows.Forms.MessageBoxButtons]::OK, [Windows.Forms.MessageBoxIcon]::Information)
 }
 
 Function WHATSNEW () {
