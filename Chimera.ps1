@@ -946,13 +946,13 @@ if ( $optionalT3 -Contains $env:Username ) {
     $objChimeraForm.Controls.Add($objFunction5Button)
     $objChimeraForm.Controls.Add($objFunctionHelpButton)
     $objChimeraForm.Controls.Add($objFunctionWhatsNewButton)
-} elseif (( $currentUser.Title -eq "Help Desk Technician::100911" ) -or ( $optionalT2 -Contains $env:Username )) {
+} elseif (( $currentUser.Title -eq "**MID TIER ACTIVE DIRECTORY JOB TITLE**" ) -or ( $optionalT2 -Contains $env:Username )) {
     $objChimeraForm = New-Object System.Windows.Forms.Form
     $objChimeraForm.Text = "Chimera - Help Desk Technician - Version: $version"
     $objChimeraForm.AutoSize = $True
     $objChimeraForm.StartPosition = "CenterScreen"
     $objChimeraForm.KeyPreview = $True
-    $objChimeraFormIconPath = '\\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\ChimeraDeps\icon.ico'
+    $objChimeraFormIconPath = '**REDACTED**'
     $objChimeraForm.Icon = New-Object System.Drawing.Icon($objChimeraFormIconPath)
     $objFindButton = New-Object System.Windows.Forms.Button
     $objFindButton.Location = New-Object System.Drawing.Size(10,55)
@@ -1209,13 +1209,13 @@ if ( $optionalT3 -Contains $env:Username ) {
     $objChimeraForm.Controls.Add($objFunction4Button)
     $objChimeraForm.Controls.Add($objFunctionHelpButton)
     $objChimeraForm.Controls.Add($objFunctionWhatsNewButton)
-} elseif ( $currentUser.Title -eq "Assoc Help Desk Tech::100912" ) {
+} elseif ( $currentUser.Title -eq "**ASSOCIATE TIER ACTIVE DIRECTORY JOB TITLE" ) {
     $objChimeraForm = New-Object System.Windows.Forms.Form
     $objChimeraForm.Text = "Chimera - Associate Help Desk Technician - Version: $version"
     $objChimeraForm.AutoSize = $True
     $objChimeraForm.StartPosition = "CenterScreen"
     $objChimeraForm.KeyPreview = $True
-    $objChimeraFormIconPath = '\\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\ChimeraDeps\icon.ico'
+    $objChimeraFormIconPath = '**REDACTED**'
     $objChimeraForm.Icon = New-Object System.Drawing.Icon($objChimeraFormIconPath)
     $objFindButton = New-Object System.Windows.Forms.Button
     $objFindButton.Location = New-Object System.Drawing.Size(10,55)
@@ -1441,13 +1441,13 @@ if ( $optionalT3 -Contains $env:Username ) {
     $objChimeraForm.Controls.Add($objFunction4Button)
     $objChimeraForm.Controls.Add($objFunctionHelpButton)
     $objChimeraForm.Controls.Add($objFunctionWhatsNewButton)
-} elseif ( $currentUser.Title -eq "Systems Analyst::100929" ) {
+} elseif ( $currentUser.Title -eq "**ACTIVE DIRECTORY SYSTEM ANALYST TITLE**" ) {
     $objChimeraForm = New-Object System.Windows.Forms.Form
     $objChimeraForm.Text = "Chimera - System Analyst -Version: $version"
     $objChimeraForm.AutoSize = $True
     $objChimeraForm.StartPosition = "CenterScreen"
     $objChimeraForm.KeyPreview = $True
-    $objChimeraFormIconPath = '\\nt-itdata\dp$\WVUM IT Help Desk\Powershell Scripts James\ChimeraDeps\icon.ico'
+    $objChimeraFormIconPath = '**REDACTED**'
     $objChimeraForm.Icon = New-Object System.Drawing.Icon($objChimeraFormIconPath)
     $objFindButton = New-Object System.Windows.Forms.Button
     $objFindButton.Location = New-Object System.Drawing.Size(10,55)
