@@ -203,10 +203,10 @@ if ( $FindADUserName -ne "" ) {
     $domainList = @($objForest.Domains | Select-Object Name)
     $domains = $domainList | ForEach {$_.Name}
     Try { 
-        (Get-ADUser -Identity $userSearchSani -Server wvuhs.com)
-        $objSelectedUserLabel.Text = "Searching the wvuhs.com Domain"
+        (Get-ADUser -Identity $userSearchSani -Server **REDACTED**)
+        $objSelectedUserLabel.Text = "Searching the **REDACTED** Domain"
         $userFound = "True"
-        $Domain = "wvuhs.com"
+        $Domain = "**REDACTED**"
         $objChimeraForm.Refresh()
     } Catch {
         $userFound = "False"
